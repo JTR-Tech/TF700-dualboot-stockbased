@@ -1,0 +1,25 @@
+From 7e638649a05ae36d92bf9632bf34a521b54a1460 Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Wed, 10 Apr 2013 21:27:35 +0200
+Subject: [PATCH 01/15] ril: fix include to make the compiler happy
+
+---
+ drivers/ril/ril.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/ril/ril.c b/drivers/ril/ril.c
+index eaaec44..8c7d3ab 100755
+--- a/drivers/ril/ril.c
++++ b/drivers/ril/ril.c
+@@ -9,7 +9,7 @@
+ #include <linux/uaccess.h>
+ #include <linux/workqueue.h>
+ #include <linux/wakelock.h>
+-#include <../../arch/arm/mach-tegra/include/mach/board-cardhu-misc.h>
++#include "../../arch/arm/mach-tegra/include/mach/board-cardhu-misc.h"
+ 
+ #include "pm-irq.h"
+ #include "ril.h"
+-- 
+1.8.2.1
+

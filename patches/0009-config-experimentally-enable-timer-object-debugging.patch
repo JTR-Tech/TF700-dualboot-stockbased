@@ -1,0 +1,32 @@
+From aec773654a8d9d878aa7e8a6d5d2eef2931a1255 Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Thu, 20 Jun 2013 23:09:12 +0200
+Subject: [PATCH 09/15] config: experimentally enable timer object debugging
+
+---
+ .config | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index 761ea77..f7c3702 100644
+--- a/.config
++++ b/.config
+@@ -3125,7 +3125,14 @@ CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC_VALUE=0
+ CONFIG_SCHED_DEBUG=y
+ CONFIG_SCHEDSTATS=y
+ CONFIG_TIMER_STATS=y
+-# CONFIG_DEBUG_OBJECTS is not set
++CONFIG_DEBUG_OBJECTS=y
++# CONFIG_DEBUG_OBJECTS_SELFTEST is not set
++# CONFIG_DEBUG_OBJECTS_FREE is not set
++CONFIG_DEBUG_OBJECTS_TIMERS=y
++# CONFIG_DEBUG_OBJECTS_WORK is not set
++# CONFIG_DEBUG_OBJECTS_RCU_HEAD is not set
++# CONFIG_DEBUG_OBJECTS_PERCPU_COUNTER is not set
++CONFIG_DEBUG_OBJECTS_ENABLE_DEFAULT=1
+ # CONFIG_DEBUG_SLAB is not set
+ # CONFIG_DEBUG_KMEMLEAK is not set
+ # CONFIG_DEBUG_PREEMPT is not set
+-- 
+1.8.2.1
+

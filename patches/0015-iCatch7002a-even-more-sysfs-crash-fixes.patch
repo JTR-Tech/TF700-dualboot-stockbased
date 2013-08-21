@@ -1,0 +1,46 @@
+From 7fc9a0a77f908872d43864a6bb92b324b853cb8f Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Tue, 2 Jul 2013 23:20:52 +0200
+Subject: [PATCH 15/15] iCatch7002a: even more sysfs crash fixes
+
+---
+ drivers/media/video/tegra/iCatch7002a.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/drivers/media/video/tegra/iCatch7002a.c b/drivers/media/video/tegra/iCatch7002a.c
+index d56489d..7d40377 100644
+--- a/drivers/media/video/tegra/iCatch7002a.c
++++ b/drivers/media/video/tegra/iCatch7002a.c
+@@ -3247,6 +3247,9 @@ static ssize_t dbg_i7002a_page_dump_read(struct file *file, char __user *buf, si
+ 	if (*ppos)
+ 		return 0;	/* the end */
+ 
++	if (!info)
++		return 0;
++
+ 	i7002a_isp_on(1);
+ 
+ 	len = snprintf(bp, dlen, "page_index=%d (0x%X)\n", dbg_i7002a_page_index, dbg_i7002a_page_index);
+@@ -3422,6 +3425,9 @@ static ssize_t dbg_i7002a_fw_header_dump_read(struct file *file, char __user *bu
+ 	if (*ppos)
+ 		return 0;	/* the end */
+ 
++	if (!info)
++		return 0;
++
+ 	i7002a_isp_on(1);
+ 
+ 	/* dump fw1 header */
+@@ -3494,6 +3500,9 @@ static ssize_t dbg_fw_update_read(struct file *file, char __user *buf, size_t co
+ 	if (*ppos)
+ 		return 0;	/* the end */
+ 
++	if (!info)
++		return 0;
++
+ 	switch(fw_update_status) {
+ 	case ICATCH_FW_NO_CMD:
+ 		len = snprintf(bp, dlen, "Never issue fw update cmd yet.\n");
+-- 
+1.8.2.1
+

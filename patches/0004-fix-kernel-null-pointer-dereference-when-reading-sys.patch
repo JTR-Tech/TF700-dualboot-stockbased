@@ -1,0 +1,28 @@
+From f326d39cc826ba07e8945f6c34ef917c61923f8c Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Wed, 10 Apr 2013 22:57:16 +0200
+Subject: [PATCH 04/15] fix kernel null pointer dereference when reading
+ /sys/bus/nvhost/drivers/tegradc/tegradc.0/nvdps
+
+---
+ drivers/video/tegra/fb.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/drivers/video/tegra/fb.c b/drivers/video/tegra/fb.c
+index c217b53..8fcd88f 100644
+--- a/drivers/video/tegra/fb.c
++++ b/drivers/video/tegra/fb.c
+@@ -408,6 +408,10 @@ static int tegra_fb_ioctl(struct fb_info *info, unsigned int cmd, unsigned long
+ }
+ 
+ int tegra_fb_get_mode(struct tegra_dc *dc) {
++	if (dc->fb->info->mode == NULL) {
++		dev_err(&dc->fb->ndev->dev, "dc->fb->info->mode is NULL\n");
++		return 0;
++	}
+ 	return dc->fb->info->mode->refresh;
+ }
+ 
+-- 
+1.8.2.1
+

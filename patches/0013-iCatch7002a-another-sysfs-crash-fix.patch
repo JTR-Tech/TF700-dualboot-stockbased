@@ -1,0 +1,26 @@
+From 9da4007fea2c526b783e10979d1e573d489234a8 Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Tue, 2 Jul 2013 22:19:05 +0200
+Subject: [PATCH 13/15] iCatch7002a: another sysfs crash fix
+
+---
+ drivers/media/video/tegra/iCatch7002a.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/drivers/media/video/tegra/iCatch7002a.c b/drivers/media/video/tegra/iCatch7002a.c
+index 5c36170..d56489d 100644
+--- a/drivers/media/video/tegra/iCatch7002a.c
++++ b/drivers/media/video/tegra/iCatch7002a.c
+@@ -3301,6 +3301,9 @@ static ssize_t dbg_i7002a_bin_dump_read(struct file *file, char __user *buf, siz
+ 	if (*ppos)
+ 		return 0;	/* the end */
+ 
++	if (!info)
++		return 0;
++
+ 	i7002a_isp_on(1);
+ 
+ 	//I2CDataWrite(0x70c4,0x00);
+-- 
+1.8.2.1
+

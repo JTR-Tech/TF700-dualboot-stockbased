@@ -1,0 +1,134 @@
+diff --git a/arch/arm/mach-tegra/include/mach/iovmm.h b/arch/arm/mach-tegra/include/mach/iovmm.h
+index cd56bd8..97c2856 100644
+--- a/arch/arm/mach-tegra/include/mach/iovmm.h
++++ b/arch/arm/mach-tegra/include/mach/iovmm.h
+@@ -355,7 +355,7 @@ static inline void tegra_iovmm_resume(void)
+ #include <linux/dma-mapping.h>
+ #include <linux/dma-direction.h>
+ 
+-#include <asm/dma-iommu.h>
++//#include <asm/dma-iommu.h>
+ 
+ #define tegra_iovmm_alloc_client(d, s, m)	tegra_iommu_alloc_client(d)
+ #define tegra_iovmm_free_client(c)		tegra_iommu_free_client(c)
+diff --git a/arch/arm/mach-tegra/pm-irq.c b/arch/arm/mach-tegra/pm-irq.c
+index a51b455..f6f796b 100644
+--- a/arch/arm/mach-tegra/pm-irq.c
++++ b/arch/arm/mach-tegra/pm-irq.c
+@@ -226,8 +226,8 @@ static void tegra_pm_irq_syscore_resume_helper(
+ 			continue;
+ 		}
+ 
+-		pr_info("Resume caused by WAKE%d, %s\n", (wake + 32 * index),
+-			desc->action->name);
++		pr_info("Resume caused by WAKE%d, %s, irq %d\n", (wake + 32 * index),
++			desc->action->name, irq);
+ 
+ 		tegra_wake_irq_count[wake + 32 * index]++;
+ 
+diff --git a/drivers/video/console/fbcon.c b/drivers/video/console/fbcon.c
+index 8745637..3d1bce4 100644
+--- a/drivers/video/console/fbcon.c
++++ b/drivers/video/console/fbcon.c
+@@ -1394,6 +1394,7 @@ static __inline__ void ywrap_up(struct vc_data *vc, int count)
+ 		p->yscroll -= p->vrows;
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode |= FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	scrollback_max += count;
+@@ -1413,6 +1414,7 @@ static __inline__ void ywrap_down(struct vc_data *vc, int count)
+ 		p->yscroll += p->vrows;
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode |= FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	scrollback_max -= count;
+@@ -1436,6 +1438,7 @@ static __inline__ void ypan_up(struct vc_data *vc, int count)
+ 
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode &= ~FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	fbcon_clear_margins(vc, 1);
+@@ -1460,6 +1463,7 @@ static __inline__ void ypan_up_redraw(struct vc_data *vc, int t, int count)
+ 
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode &= ~FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	fbcon_clear_margins(vc, 1);
+@@ -1484,6 +1488,7 @@ static __inline__ void ypan_down(struct vc_data *vc, int count)
+ 
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode &= ~FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	fbcon_clear_margins(vc, 1);
+@@ -1508,6 +1513,7 @@ static __inline__ void ypan_down_redraw(struct vc_data *vc, int t, int count)
+ 
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = p->yscroll * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->var.vmode &= ~FB_VMODE_YWRAP;
+ 	ops->update_start(info);
+ 	fbcon_clear_margins(vc, 1);
+@@ -2255,6 +2261,7 @@ static int fbcon_switch(struct vc_data *vc)
+ 
+ 	if (!fbcon_is_inactive(vc, info)) {
+ 	    ops->var.xoffset = ops->var.yoffset = p->yscroll = 0;
++		ops->var.reserved[2] = 1;
+ 	    ops->update_start(info);
+ 	}
+ 
+@@ -2826,6 +2833,7 @@ static int fbcon_scrolldelta(struct vc_data *vc, int lines)
+ 
+ 	ops->var.xoffset = 0;
+ 	ops->var.yoffset = offset * vc->vc_font.height;
++	ops->var.reserved[2] = 1;
+ 	ops->update_start(info);
+ 
+ 	if (!scrollback_current)
+@@ -2895,6 +2903,7 @@ static void fbcon_modechanged(struct fb_info *info)
+ 
+ 		if (!fbcon_is_inactive(vc, info)) {
+ 		    ops->var.xoffset = ops->var.yoffset = p->yscroll = 0;
++			ops->var.reserved[2] = 1;
+ 		    ops->update_start(info);
+ 		}
+ 
+diff --git a/drivers/video/tegra/fb.c b/drivers/video/tegra/fb.c
+index 8fcd88f..7e7bfaa 100644
+--- a/drivers/video/tegra/fb.c
++++ b/drivers/video/tegra/fb.c
+@@ -290,9 +290,12 @@ static int tegra_fb_pan_display(struct fb_var_screeninfo *var,
+ 	 * Do nothing if display parameters are same as current values.
+ 	 */
+ 	if ((var->xoffset == tegra_fb->curr_xoffset) &&
+-	    (var->yoffset == tegra_fb->curr_yoffset))
++	    (var->yoffset == tegra_fb->curr_yoffset) &&
++		(var->reserved[2] == 0))
+ 		return 0;
+ 
++	var->reserved[2] = 0;
++
+ 	if (!tegra_fb->win->cur_handle) {
+ 		flush_start = info->screen_base + (var->yoffset * info->fix.line_length);
+ 		flush_end = flush_start + (var->yres * info->fix.line_length);
+diff --git a/kernel/irq/manage.c b/kernel/irq/manage.c
+index d6c4adc..93fe470 100644
+--- a/kernel/irq/manage.c
++++ b/kernel/irq/manage.c
+@@ -497,6 +497,7 @@ int irq_set_irq_wake(unsigned int irq, unsigned int on)
+ 	/* wakeup-capable irqs can be shared between drivers that
+ 	 * don't need to have the same sleep mode behaviors.
+ 	 */
++	printk(KERN_DEBUG "irq %d set to %d\n", irq, on);
+ 	if (on) {
+ 		if (desc->wake_depth++ == 0) {
+ 			ret = set_irq_wake_real(irq, on);
