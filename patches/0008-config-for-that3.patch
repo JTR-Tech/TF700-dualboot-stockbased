@@ -1,7 +1,7 @@
 From ddaabf43fa106a0cee30c21ff91dba0a57465931 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 18 Jun 2013 23:47:10 +0200
-Subject: [PATCH 08/15] config for that3
+Subject: [PATCH 08/21] config for that3
 
 ---
  .config | 31 ++++++++++++++++++++++++-------
@@ -103,5 +103,5 @@ index dfde1bf..761ea77 100644
  # CONFIG_SECURITY is not set
  # CONFIG_SECURITYFS is not set
 -- 
-1.8.2.1
+1.8.3.2
 

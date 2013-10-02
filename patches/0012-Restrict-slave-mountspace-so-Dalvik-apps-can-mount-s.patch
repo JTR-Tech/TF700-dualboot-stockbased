@@ -1,7 +1,7 @@
 From 8d0f4c046c00030b4bb13dac30101d27756ed692 Mon Sep 17 00:00:00 2001
 From: Mike Kasick <mike@kasick.org>
 Date: Thu, 17 Jan 2013 20:34:32 -0500
-Subject: [PATCH 12/15] Restrict slave mountspace so Dalvik apps can mount
+Subject: [PATCH 12/21] Restrict slave mountspace so Dalvik apps can mount
  system-wide volumes
 
 Android 4.2 implements multi-user storage using per-process mount
@@ -113,5 +113,5 @@ index 5e7f2e9..197ff79 100644
  	retval = kern_path(dir_name, LOOKUP_FOLLOW, &path);
  	if (retval)
 -- 
-1.8.2.1
+1.8.3.2
 

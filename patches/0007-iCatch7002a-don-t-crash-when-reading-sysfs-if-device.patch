@@ -1,7 +1,7 @@
 From 72fe676e07e933fa5164ce57494c19adcbe614a2 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 18 Jun 2013 23:46:30 +0200
-Subject: [PATCH 07/15] iCatch7002a: don't crash when reading sysfs if device
+Subject: [PATCH 07/21] iCatch7002a: don't crash when reading sysfs if device
  is not present
 
 ---
@@ -46,5 +46,5 @@ index e697669..5c36170 100644
  		if (info->pdata && info->pdata->power_on) {
  			info->pdata->power_on();
 -- 
-1.8.2.1
+1.8.3.2
 

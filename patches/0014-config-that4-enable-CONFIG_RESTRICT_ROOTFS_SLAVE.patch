@@ -1,7 +1,7 @@
 From abd38ed6e84375fb43bc3737a2b267af2c0b64e0 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 2 Jul 2013 22:19:25 +0200
-Subject: [PATCH 14/15] config: that4; enable CONFIG_RESTRICT_ROOTFS_SLAVE
+Subject: [PATCH 14/21] config: that4; enable CONFIG_RESTRICT_ROOTFS_SLAVE
 
 ---
  .config | 3 ++-
@@ -29,5 +29,5 @@ index 5ea91f3..7bf8365 100644
  #
  # Kernel hacking
 -- 
-1.8.2.1
+1.8.3.2
 

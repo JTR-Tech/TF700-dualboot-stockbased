@@ -1,7 +1,7 @@
 From 8660cab8e6a7ee73cb4e394d5654453c8d8bbcab Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Wed, 10 Apr 2013 22:56:26 +0200
-Subject: [PATCH 03/15] ROW I/O scheduler v4
+Subject: [PATCH 03/21] ROW I/O scheduler v4
 
 ---
  Documentation/block/row-iosched.txt | 134 +++++++
@@ -911,5 +911,5 @@ index 0000000..e60ff4e
 +MODULE_LICENSE("GPLv2");
 +MODULE_DESCRIPTION("Read Over Write IO scheduler");
 -- 
-1.8.2.1
+1.8.3.2
 

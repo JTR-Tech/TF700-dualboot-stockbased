@@ -1,7 +1,7 @@
 From 648bc6bf7e2cac19824db0b375714d2d879151a6 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 2 Jul 2013 22:06:46 +0200
-Subject: [PATCH 11/15] config: fix version number and add hfsplus module
+Subject: [PATCH 11/21] config: fix version number and add hfsplus module
 
 ---
  .config | 4 ++--
@@ -30,5 +30,5 @@ index f7c3702..5ea91f3 100644
  # CONFIG_BFS_FS is not set
  # CONFIG_EFS_FS is not set
 -- 
-1.8.2.1
+1.8.3.2
 

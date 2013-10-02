@@ -1,7 +1,7 @@
 From 3793e345d461d300465047df169b9f09ab5f466a Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Wed, 10 Apr 2013 22:59:08 +0200
-Subject: [PATCH 05/15] added fsync user control by Ezekeel
+Subject: [PATCH 05/21] added fsync user control by Ezekeel
 
 ---
  drivers/misc/Kconfig         |   6 +++
@@ -261,5 +261,5 @@ index c98a747..38161d5 100644
  	if (flags & ~VALID_FLAGS)
  		goto out;
 -- 
-1.8.2.1
+1.8.3.2
 

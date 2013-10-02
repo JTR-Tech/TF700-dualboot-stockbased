@@ -1,7 +1,7 @@
 From 7fc9a0a77f908872d43864a6bb92b324b853cb8f Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 2 Jul 2013 23:20:52 +0200
-Subject: [PATCH 15/15] iCatch7002a: even more sysfs crash fixes
+Subject: [PATCH 15/21] iCatch7002a: even more sysfs crash fixes
 
 ---
  drivers/media/video/tegra/iCatch7002a.c | 9 +++++++++
@@ -42,5 +42,5 @@ index d56489d..7d40377 100644
  	case ICATCH_FW_NO_CMD:
  		len = snprintf(bp, dlen, "Never issue fw update cmd yet.\n");
 -- 
-1.8.2.1
+1.8.3.2
 

@@ -1,7 +1,7 @@
 From 9da4007fea2c526b783e10979d1e573d489234a8 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Tue, 2 Jul 2013 22:19:05 +0200
-Subject: [PATCH 13/15] iCatch7002a: another sysfs crash fix
+Subject: [PATCH 13/21] iCatch7002a: another sysfs crash fix
 
 ---
  drivers/media/video/tegra/iCatch7002a.c | 3 +++
@@ -22,5 +22,5 @@ index 5c36170..d56489d 100644
  
  	//I2CDataWrite(0x70c4,0x00);
 -- 
-1.8.2.1
+1.8.3.2
 

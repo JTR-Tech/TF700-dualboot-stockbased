@@ -1,7 +1,7 @@
 From 2de7b984a1d54d4543a03b209cf5e3d80759e549 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Wed, 10 Apr 2013 22:43:27 +0200
-Subject: [PATCH 02/15] added user voltage control from faux123
+Subject: [PATCH 02/21] added user voltage control from faux123
 
 ---
  arch/arm/mach-tegra/Kconfig       |  9 +++++
@@ -143,5 +143,5 @@ index 26faaa2..b201153 100644
  };
  
 -- 
-1.8.2.1
+1.8.3.2
 

@@ -1,7 +1,7 @@
 From 9d9db312c5987d6313d0ff29b3d41b36743c2ab3 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Thu, 20 Jun 2013 23:21:58 +0200
-Subject: [PATCH 10/15] tegra: remove extern inline for read_pmc_wake_status to
+Subject: [PATCH 10/21] tegra: remove extern inline for read_pmc_wake_status to
  make gcc happy
 
 ---
@@ -22,5 +22,5 @@ index 45d012c..7c81a03 100644
  {
  	if (current_suspend_mode == TEGRA_SUSPEND_LP0)
 -- 
-1.8.2.1
+1.8.3.2
 

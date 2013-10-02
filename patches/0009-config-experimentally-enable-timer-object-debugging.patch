@@ -1,7 +1,7 @@
 From aec773654a8d9d878aa7e8a6d5d2eef2931a1255 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Thu, 20 Jun 2013 23:09:12 +0200
-Subject: [PATCH 09/15] config: experimentally enable timer object debugging
+Subject: [PATCH 09/21] config: experimentally enable timer object debugging
 
 ---
  .config | 9 ++++++++-
@@ -28,5 +28,5 @@ index 761ea77..f7c3702 100644
  # CONFIG_DEBUG_KMEMLEAK is not set
  # CONFIG_DEBUG_PREEMPT is not set
 -- 
-1.8.2.1
+1.8.3.2
 

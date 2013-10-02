@@ -1,7 +1,7 @@
 From f55427e27b3c1468aa67f8ee3fe64c59229b6404 Mon Sep 17 00:00:00 2001
 From: that <github@that.at>
 Date: Thu, 11 Apr 2013 00:56:17 +0200
-Subject: [PATCH 06/15] config for that2
+Subject: [PATCH 06/21] config for that2
 
 ---
  .config | 3359 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3374,5 +3374,5 @@ index 0000000..dfde1bf
 +# CONFIG_AVERAGE is not set
 +# CONFIG_CORDIC is not set
 -- 
-1.8.2.1
+1.8.3.2
 
