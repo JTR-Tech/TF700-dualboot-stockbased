@@ -1,0 +1,36 @@
+From a791c29a131574ae873be46f0876b514c1d965ee Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Thu, 5 Sep 2013 00:17:14 +0200
+Subject: [PATCH 21/21] config: that5-oc, add kexec-hardboot
+
+---
+ .config | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/.config b/.config
+index c4e9959..2a98bbe 100644
+--- a/.config
++++ b/.config
+@@ -39,7 +39,7 @@ CONFIG_IRQ_WORK=y
+ CONFIG_EXPERIMENTAL=y
+ CONFIG_INIT_ENV_ARG_LIMIT=32
+ CONFIG_CROSS_COMPILE=""
+-CONFIG_LOCALVERSION="-10.6.1.14.8-that4-oc"
++CONFIG_LOCALVERSION="-10.6.1.14.8-that5-oc"
+ # CONFIG_LOCALVERSION_AUTO is not set
+ CONFIG_HAVE_KERNEL_GZIP=y
+ CONFIG_HAVE_KERNEL_LZMA=y
+@@ -500,7 +500,9 @@ CONFIG_CMDLINE="tegra_wdt.heartbeat=30"
+ CONFIG_CMDLINE_EXTEND=y
+ # CONFIG_CMDLINE_FORCE is not set
+ # CONFIG_XIP_KERNEL is not set
+-# CONFIG_KEXEC is not set
++CONFIG_KEXEC=y
++CONFIG_ATAGS_PROC=y
++CONFIG_KEXEC_HARDBOOT=y
+ # CONFIG_CRASH_DUMP is not set
+ # CONFIG_AUTO_ZRELADDR is not set
+ 
+-- 
+1.8.3.2
+

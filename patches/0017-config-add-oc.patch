@@ -1,0 +1,25 @@
+From da5d69891571d348abc245648c1a3ead30370e5c Mon Sep 17 00:00:00 2001
+From: that <github@that.at>
+Date: Wed, 3 Jul 2013 00:08:18 +0200
+Subject: [PATCH 17/21] config: add -oc
+
+---
+ .config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index 7bf8365..c4e9959 100644
+--- a/.config
++++ b/.config
+@@ -39,7 +39,7 @@ CONFIG_IRQ_WORK=y
+ CONFIG_EXPERIMENTAL=y
+ CONFIG_INIT_ENV_ARG_LIMIT=32
+ CONFIG_CROSS_COMPILE=""
+-CONFIG_LOCALVERSION="-10.6.1.14.8-that4"
++CONFIG_LOCALVERSION="-10.6.1.14.8-that4-oc"
+ # CONFIG_LOCALVERSION_AUTO is not set
+ CONFIG_HAVE_KERNEL_GZIP=y
+ CONFIG_HAVE_KERNEL_LZMA=y
+-- 
+1.8.3.2
+
