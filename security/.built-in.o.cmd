@@ -1,0 +1,1 @@
+cmd_security/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o security/built-in.o security/keys/built-in.o security/commoncap.o security/min_addr.o security/lsm_audit.o security/tf_driver/built-in.o 

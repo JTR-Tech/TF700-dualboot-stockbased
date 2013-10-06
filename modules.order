@@ -1,0 +1,5 @@
+kernel/fs/nfs/blocklayout/blocklayoutdriver.ko
+kernel/drivers/char/apm-emulation.ko
+kernel/drivers/net/wireless/bcmdhd_29/bcmdhd_29.ko
+kernel/drivers/net/wireless/bcm43xx/bcmdhd_34.ko
+kernel/drivers/staging/zram/zram.ko

@@ -1,0 +1,1 @@
+cmd_drivers/usb/class/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/usb/class/built-in.o drivers/usb/class/cdc-acm.o drivers/usb/class/cdc-wdm.o 

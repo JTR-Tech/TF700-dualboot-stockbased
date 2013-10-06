@@ -1,0 +1,1 @@
+cmd_lib/reed_solomon/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o lib/reed_solomon/built-in.o lib/reed_solomon/reed_solomon.o 

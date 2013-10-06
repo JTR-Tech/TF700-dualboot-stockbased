@@ -1,0 +1,1 @@
+cmd_drivers/net/usb/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/net/usb/built-in.o drivers/net/usb/asix.o drivers/net/usb/cdc_ether.o drivers/net/usb/smsc95xx.o drivers/net/usb/cdc_subset.o drivers/net/usb/usbnet.o drivers/net/usb/cdc_ncm.o drivers/net/usb/raw_ip_net.o 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/otg/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/usb/otg/built-in.o drivers/usb/otg/otg.o drivers/usb/otg/otg_id.o drivers/usb/otg/tegra-otg.o drivers/usb/otg/ulpi.o drivers/usb/otg/ulpi_viewport.o 

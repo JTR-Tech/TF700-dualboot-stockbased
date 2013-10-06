@@ -1,0 +1,1 @@
+cmd_drivers/input/asusec/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/input/asusec/built-in.o drivers/input/asusec/asuspec.o drivers/input/asusec/asusdec.o drivers/input/asusec/elan_i2c_asus.o 

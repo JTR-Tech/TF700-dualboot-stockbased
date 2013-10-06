@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o sound/soc/codecs/built-in.o sound/soc/codecs/snd-soc-rt5631.o sound/soc/codecs/snd-soc-spdif.o sound/soc/codecs/snd-soc-wm8903.o sound/soc/codecs/snd-soc-rt5642.o 

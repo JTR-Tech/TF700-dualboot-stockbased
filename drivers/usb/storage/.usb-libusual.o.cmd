@@ -1,0 +1,1 @@
+cmd_drivers/usb/storage/usb-libusual.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/usb/storage/usb-libusual.o drivers/usb/storage/libusual.o drivers/usb/storage/usual-tables.o 

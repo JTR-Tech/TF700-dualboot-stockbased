@@ -1,0 +1,1 @@
+cmd_sound/soc/snd-soc-core.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o sound/soc/snd-soc-core.o sound/soc/soc-core.o sound/soc/soc-dapm.o sound/soc/soc-jack.o sound/soc/soc-cache.o sound/soc/soc-utils.o sound/soc/soc-pcm.o sound/soc/soc-io.o 

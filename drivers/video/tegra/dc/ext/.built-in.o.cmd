@@ -1,0 +1,1 @@
+cmd_drivers/video/tegra/dc/ext/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/video/tegra/dc/ext/built-in.o drivers/video/tegra/dc/ext/dev.o drivers/video/tegra/dc/ext/util.o drivers/video/tegra/dc/ext/cursor.o drivers/video/tegra/dc/ext/events.o drivers/video/tegra/dc/ext/control.o 

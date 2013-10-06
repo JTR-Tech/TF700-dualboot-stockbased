@@ -1,0 +1,1 @@
+cmd_drivers/misc/inv_mpu/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/misc/inv_mpu/built-in.o drivers/misc/inv_mpu/mpu3050.o drivers/misc/inv_mpu/accel/built-in.o drivers/misc/inv_mpu/compass/built-in.o drivers/misc/inv_mpu/pressure/built-in.o 

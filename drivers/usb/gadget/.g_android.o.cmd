@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/g_android.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/usb/gadget/g_android.o drivers/usb/gadget/android.o 

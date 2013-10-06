@@ -1,0 +1,1 @@
+cmd_drivers/video/tegra/host/isp/nvhost-isp.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/video/tegra/host/isp/nvhost-isp.o drivers/video/tegra/host/isp/isp.o 

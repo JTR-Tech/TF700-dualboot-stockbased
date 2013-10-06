@@ -1,0 +1,1 @@
+cmd_security/tf_driver/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o security/tf_driver/built-in.o security/tf_driver/tf_driver.o 

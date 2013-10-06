@@ -1,0 +1,1 @@
+cmd_drivers/char/apm-emulation.ko := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL -r  -T /home/josh/TF700-dualboot-stockbased/scripts/module-common.lds --build-id  -o drivers/char/apm-emulation.ko drivers/char/apm-emulation.o drivers/char/apm-emulation.mod.o

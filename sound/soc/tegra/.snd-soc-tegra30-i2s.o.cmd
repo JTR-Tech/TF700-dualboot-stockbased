@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra30-i2s.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o sound/soc/tegra/snd-soc-tegra30-i2s.o sound/soc/tegra/tegra30_i2s.o 

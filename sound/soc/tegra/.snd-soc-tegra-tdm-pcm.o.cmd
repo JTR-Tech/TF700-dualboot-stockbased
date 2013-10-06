@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra-tdm-pcm.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o sound/soc/tegra/snd-soc-tegra-tdm-pcm.o sound/soc/tegra/tegra_tdm_pcm.o 

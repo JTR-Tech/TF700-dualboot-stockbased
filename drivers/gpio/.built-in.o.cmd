@@ -1,0 +1,1 @@
+cmd_drivers/gpio/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/gpio/built-in.o drivers/gpio/gpiolib.o drivers/gpio/gpio-pca953x.o drivers/gpio/gpio-rc5t583.o drivers/gpio/gpio-tegra.o 

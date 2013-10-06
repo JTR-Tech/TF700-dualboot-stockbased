@@ -1,0 +1,1 @@
+cmd_drivers/watchdog/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/watchdog/built-in.o drivers/watchdog/tegra_wdt.o 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/serial/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/usb/serial/built-in.o drivers/usb/serial/usbserial.o drivers/usb/serial/baseband_usb_chr.o drivers/usb/serial/option.o drivers/usb/serial/pl2303.o drivers/usb/serial/qcserial.o drivers/usb/serial/usb_wwan.o 

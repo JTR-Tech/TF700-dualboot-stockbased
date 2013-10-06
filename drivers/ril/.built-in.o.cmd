@@ -1,0 +1,1 @@
+cmd_drivers/ril/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/ril/built-in.o drivers/ril/ril.o drivers/ril/ril_proximity.o drivers/ril/ril_wakeup.o drivers/ril/ril_sim.o drivers/ril/ril_modem_crash.o 

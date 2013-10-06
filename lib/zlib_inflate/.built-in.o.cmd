@@ -1,0 +1,1 @@
+cmd_lib/zlib_inflate/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o lib/zlib_inflate/built-in.o lib/zlib_inflate/zlib_inflate.o 

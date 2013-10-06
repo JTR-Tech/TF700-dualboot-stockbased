@@ -1,0 +1,1 @@
+cmd_sound/pci/hda/snd-hda-codec.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o sound/pci/hda/snd-hda-codec.o sound/pci/hda/hda_codec.o sound/pci/hda/hda_generic.o sound/pci/hda/hda_proc.o 

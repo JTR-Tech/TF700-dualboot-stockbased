@@ -1,0 +1,1 @@
+cmd_drivers/md/built-in.o :=  /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o drivers/md/built-in.o drivers/md/dm-mod.o drivers/md/dm-crypt.o 

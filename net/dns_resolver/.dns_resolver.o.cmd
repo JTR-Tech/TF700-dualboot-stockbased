@@ -1,0 +1,1 @@
+cmd_net/dns_resolver/dns_resolver.o := /home/josh/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin/arm-linux-gnueabihf-ld -EL    -r -o net/dns_resolver/dns_resolver.o net/dns_resolver/dns_key.o net/dns_resolver/dns_query.o 
